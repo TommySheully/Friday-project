@@ -22,7 +22,7 @@ function App() {
                 <Route path={'/Registration'} element={<Registration/>}/>
                 <Route path={'/Test'} element={<Test/>}/>
 
-                <Route path={'*'} element={<Error404/>}/>
+                <Route path={'/*'} element={<Error404/>}/>
             </Routes>
         </div>
     );
