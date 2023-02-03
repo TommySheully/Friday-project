@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Navigate, Route, Routes} from "react-router-dom";
 import Login from "./Components/Login/Login";
@@ -14,13 +13,15 @@ function App() {
     return (
         <div className="App">
             <Routes>
-                <Route path={'/Friday-project'} element={<Navigate to={"/Test"}/>}/>
-                <Route path={'/Login'} element={<Login/>}/>
-                <Route path={'/CreateNewPassword'} element={<CreateNewPassword/>}/>
-                <Route path={'/PasswordRecovery'} element={<PasswordRecovery/>}/>
-                <Route path={'/Profile'} element={<Profile/>}/>
-                <Route path={'/Registration'} element={<Registration/>}/>
-                <Route path={'/Test'} element={<Test/>}/>
+                <Route path={'/'} element={<Test/>}/>
+                <Route path={'/friday-project'} element={<Navigate to={"/Test"}/>}/>
+
+                <Route path={'/login'} element={<Login/>}/>
+                <Route path={'/createNewPassword'} element={<CreateNewPassword/>}/>
+                <Route path={'/passwordRecovery'} element={<PasswordRecovery/>}/>
+                <Route path={'/profile'} element={<Profile/>}/>
+                <Route path={'/registration'} element={<Registration/>}/>
+                <Route path={'/test'} element={<Test/>}/>
 
                 <Route path={'/*'} element={<Error404/>}/>
             </Routes>
